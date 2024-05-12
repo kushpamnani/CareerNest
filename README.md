@@ -4,7 +4,7 @@ Welcome to **CareerNest**, a full-stack web application designed to transform th
 
 ## Project Overview
 
-**Job-Portal-App** aims to simplify the process of finding and applying for jobs through a user-friendly interface that mirrors the efficiency and accessibility of leading job search platforms. This solution integrates advanced functionalities into a single platform, facilitating an effective job search experience.
+**CareerNest** aims to simplify the process of finding and applying for jobs through a user-friendly interface that mirrors the efficiency and accessibility of leading job search platforms. This solution integrates advanced functionalities into a single platform, facilitating an effective job search experience.
 
 ## Key Features
 
