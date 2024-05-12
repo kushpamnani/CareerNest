@@ -1,0 +1,48 @@
+.jobFinder {
+    font-family: Arial, sans-serif;
+}
+
+.searchBar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.searchBar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+
+.searchBar label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.jobList {
+    display: flex;
+    flex-direction: column;
+}
+
+.job {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.jobTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.jobDate {
+    font-size: 12px;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
