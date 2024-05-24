@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/job_portal", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:27017/job_portal", { useNewUrlParser: true, useUnifiedTopology: true }); //my MongoDB connection
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", () => console.log("Connected to MongoDB"));
@@ -32,7 +32,7 @@ const jobSchema = new mongoose.Schema({
 const Job = mongoose.model("Job", jobSchema);
 
 // Define Routes
-// GET all jobs
+// GET method
 app.get("/api/jobs", async (req, res) => {
     try {
         const jobs = await Job.find();
@@ -42,7 +42,7 @@ app.get("/api/jobs", async (req, res) => {
     }
 });
 
-// POST a new job
+// POST method
 app.post("/api/jobs", async (req, res) => {
     const job = new Job(req.body);
     try {
@@ -53,7 +53,7 @@ app.post("/api/jobs", async (req, res) => {
     }
 });
 
-// GET a specific job
+// GET (specific job) method
 app.get("/api/jobs/:id", getJob, (req, res) => {
     res.json(res.job);
 });
@@ -75,7 +75,7 @@ async function getJob(req, res, next) {
 }
 
 
-
+//PATCH method
 app.patch("/api/jobs/:id", getJob, async (req, res) => {
     let job = res.job;
 
@@ -95,7 +95,7 @@ app.patch("/api/jobs/:id", getJob, async (req, res) => {
     }
 });
 
-//delete operation
+//DELETE method
 app.delete("/api/jobs/:id", async (req, res) => {
     try {
         const result = await Job.deleteOne({ _id: req.params.id });
