@@ -1,3 +1,7 @@
+/*
+Author: Kush Pamnani
+*/
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import profileImage from './profile.jpeg';
